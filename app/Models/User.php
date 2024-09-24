@@ -44,4 +44,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function isManager()
+    {
+        return true;
+    }
+
+    public function isAdmin()
+    {
+        return true;
+    }
 }

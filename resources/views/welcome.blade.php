@@ -21,12 +21,13 @@
 
             resources/views/welcome.blade.php
 
-{{--            <livewire:common.controls.input_readonly fieldName="id" :form="$form" :key="'idReadonly'"  />--}}
+            @feature('isAdminLogged')
+            isAdminLogged CONTENT
+            @endfeature
 
-            <livewire:counter/>
-            <hr>
-            <livewire:editor/>
-
+            @feature('isManagerLogged')
+            isManagerLogged CONTENT
+            @endfeature
 
 
         </div>

@@ -56,7 +56,7 @@ class Editor extends Component
             DB::beginTransaction();
             $user->save();
 //            $this->dispatch('profileEditorSaved', ['id' => $this->form->id]);
-            $this->dispatch('saved');
+//            $this->dispatch('saved');
             DB::commit();
 
         } catch (QueryException|\Exception $e) {

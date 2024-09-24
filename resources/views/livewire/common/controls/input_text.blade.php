@@ -1,8 +1,6 @@
 <?php
-
 use Livewire\Volt\Component;
 use Livewire\Attributes\Modelable;
-
 new class extends Component {
     #[Modelable]
     public $form;

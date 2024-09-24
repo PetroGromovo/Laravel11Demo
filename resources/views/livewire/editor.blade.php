@@ -1,7 +1,7 @@
-<div>
+<div style="background: gray; color: black">
     resources/views/livewire/editor.blade.php
 
-    <form class="form-editor" wire:submit="update" enctype="multipart/form-data">
+    <form class="form-editor" wire:submit="update" wire:key="editor-form">
 
 
         <livewire:common.controls.input_readonly fieldName="id" :form="$form" :key="'idReadonly'"/>
@@ -21,22 +21,4 @@
             Update
         </button>
     </form>
-
-
-    @script
-    <script>
-
-
-        // This event listener updates the component with all childs
-        $wire.on("profileEditorSaved", ($options) => {
-            console.log('profileEditorSaved $options::')
-            console.log($options)
-
-            $wire.$refresh();
-            console.log('resources/views/livewire/editor.blade.php AFTER $wire.$refresh() !!!')
-        });
-
-    </script>
-    @endscript
-
 </div>
